@@ -7,7 +7,7 @@
     <title>Tugas 1c</title>
     <style>
         .box {
-            border: 3px solid;
+            border: 3px solid black;
             background-color: aquamarine;
             width: 100px;
             height: 100px;
@@ -15,7 +15,7 @@
         }
 
         h2{
-            margin-top: 25px;
+            line-height: 50px;
         }
 
         .miring2, .miring3 {
