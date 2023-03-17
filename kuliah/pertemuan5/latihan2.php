@@ -26,5 +26,13 @@ $Makanan = ['🍗','🍉','🍊','🍌','🍍']
     <?php } ?>
 </ul>
 
+<!-- buat manggil key nya pake $key => $m -->
+
+<h2>Daftar Makanan</h2>
+   <ul> 
+    <?php foreach ($Makanan as $key => $m) {?>
+    <li><?= $key; ?></li>
+    <?php } ?>
+    </ul>
 </body>
 </html>
