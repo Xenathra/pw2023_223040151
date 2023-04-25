@@ -12,7 +12,7 @@ $kata = ['epan','cipta','akan','u','asa','esok'];
 </head>
 <body>
     <p>
-        M<?php echo $kata [4]; ?> D<?php echo $kata [0]; ?>mu di<?php echo $kata [1]; ?>kan oleh apa yang kau kerj<?php echo $kata [2]; ?> hari ini, b<?php echo $kata [3]; ?> kan b<?php echo $kata [5];  ?>
+        M<?= $kata [4]; ?> D<?= $kata [0]; ?>mu di<?= $kata [1]; ?>kan oleh apa yang kau kerj<?= $kata [2]; ?> hari ini, b<?= $kata [3]; ?> kan b<?= $kata [5];  ?>
     </p>
 </body>
 </html>
