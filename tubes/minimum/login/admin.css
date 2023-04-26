@@ -1,0 +1,92 @@
+*,html{
+    margin: 0;
+    padding: 0;
+    font-family: "museo-sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url(../img/home-background.jpg);
+    background-size: cover;
+}
+
+/* navbar-start */
+.navbar{
+    background-color: #c3c3c5;
+    height: 10px;
+    font-size: 20px;
+    padding: 20px 0;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    padding-right: 12px;
+}
+
+.navbar-kanan{
+    float: right;
+    margin-right: 40px;
+}
+
+.navbar-kiri{
+    float: left;
+    margin-left: 40px;
+}
+/* navbar-end */
+
+/* content-start */
+main{
+    background: #c3c3c5;
+    margin: 0 200px ;
+    border-radius: 25px;
+    padding: 20px;
+    opacity: 0.9;
+}
+
+.colmn1{
+    display: flex;
+    font-weight: bold;
+}
+
+textarea{
+    background: #949495;
+    color: white;
+    border-radius: 8px;
+}
+/* content-end */
+
+/* done-btn-start */
+.done-btn{
+    border-radius: 8px;
+    background: #949495;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 10%;
+}
+
+.done-btn:hover { /* hover on */
+    transition: 1s ease-in-out;
+    background: #f7f7f9;
+    color: #3c3c3c;
+}
+
+.done-btn { /* hover off */
+    transition: 1s ease-out;
+}
+/* done-btn-end */
+
+/* logout-btn-start */
+.logout-btn a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* logout-btn-end */

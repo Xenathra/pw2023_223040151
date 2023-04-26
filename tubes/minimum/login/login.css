@@ -5,7 +5,7 @@ body{
     width: 800px;
     margin: 0 auto;
     padding-top: 150px;
-    background-image: url(LoginBackground.jpg);
+    background-image: url(../img/LoginBackground.jpg);
     background-size: cover;
 }
 
@@ -37,7 +37,6 @@ input[type=password] {
     color: #000000; 
 }
 
-/* last update, working on textbox animation with span b */
 
 
 
@@ -64,11 +63,7 @@ button:hover { /* hover on */
 button { /* hover off */
     transition: 1s ease-out;
 }
-/* button animation-end */
 
-/* textbox animation-start */
-
-/* textbox animation-end */
 
 
 

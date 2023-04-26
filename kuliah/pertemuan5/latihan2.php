@@ -15,7 +15,7 @@ $Makanan = ['🍗','🍉','🍊','🍌','🍍']
 <h2>Daftar Binatang</h2>    
 <ul>
     <?php foreach ($binatang as $b) {?>
-    <li><?= $b; ?></li>
+    <li><?= $b ;?></li>
     <?php } ?>
 </ul>
 
