@@ -1,7 +1,7 @@
 <?php 
     if( isset($_POST['submit']) ){
         if( $_POST['uname'] == "admin" && $_POST['psw'] == "admin" ){
-            header("Location: admin.php");
+            header("Location: ../admin/admin.php");
             exit;
         }else{
             $errormsg = true;
