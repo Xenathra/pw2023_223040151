@@ -6,9 +6,9 @@
 }
 
 body{
-    background-image: url(../img/home-background.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: url('../img/home.jpg');
+    /* background-size: cover; */
+    /* background-position: center; */
 }
 
 /* navbar start */
@@ -68,15 +68,11 @@ a{
 .scnd-nav a:hover{
     border-bottom: 3px solid #adadad;
 }
-
-
-
 /* navbar end */
 
 /* content-start */
 .content-wrapper{
     border: 1px solid transparent;
-    margin: 64px 74px ;
     color: #000000;
     font-size: 18px;
     text-align: justify;
@@ -85,7 +81,11 @@ a{
     
 }
 
-
+.container{
+    background-color: #d8d8d8;
+    border-radius: 15px;
+    padding: 12px;
+}
 
 .content-wrapper li{
     font-size: 22px;
@@ -97,8 +97,7 @@ a{
 }
 
 main{
-    margin-left: 200px;
-    margin-right: 200px;
+    margin: 0 200px 0 200px;
 }
 
 content-4{
@@ -116,14 +115,14 @@ footer{
     background: #3e3e3e;
     height: auto;
     width: 100vw;
-    padding-top: 40px;
+    padding-top: 10px;
     opacity: 0.9;
 }
 
 .footer-content{
     display: flex;
-    flex-wrap: nowrap;
-    padding: 50px 47%;
+    justify-content: center;
+    padding: 30px 47%;
 }
 
 .footer-content a{

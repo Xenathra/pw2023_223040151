@@ -8,14 +8,12 @@
             
         }
     }
-
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login Form Test</title>
+    <title>Login Form</title>
 
     <link rel="stylesheet" href="login.css">
 
@@ -32,7 +30,7 @@
         </div> 
     <!-- Error Message-end -->
      
-    
+    <!-- form-start -->
         <form action="" method="post">       
                     <!-- username-start -->
                     <label for="uname"><span class="text"><b>Username</b></label></span>
@@ -47,8 +45,8 @@
                     <!-- LoginButton-start -->
                     <button type="submit" name="submit">Login</button>
                     <!-- LoginButton-end -->
-
         </form>
+    <!-- form-end -->
      </div>  
 </body>
 </html>

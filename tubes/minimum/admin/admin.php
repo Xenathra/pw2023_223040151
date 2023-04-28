@@ -30,7 +30,7 @@
         <h3>Add an article</h3>
         <br><br>
             <form action="" method="post">
-                <label class="colmn1" for="add-txt">Add text :</label>
+                <label class="colmn1" for="add-txt">Add here :</label>
                 <textarea name="add-txt" id="add-txt" cols="50" rows="10"></textarea>
                 
                 <br><br>
