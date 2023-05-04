@@ -34,7 +34,7 @@
         <form action="" method="post">       
                     <!-- username-start -->
                     <label for="uname"><span class="text"><b>Username</b></label></span>
-                    <input type="text" id="uname" name="uname" required>
+                    <input type="text" id="uname" name="uname" required autocomplete="off">
                     <!-- username-end -->
                     
                     <!-- psw-start -->
