@@ -57,6 +57,7 @@ a{
     position: fixed;
     top: 0;
     cursor: pointer;
+    height: 50px;
 }
 
 .scnd-nav a{
