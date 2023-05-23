@@ -7,21 +7,14 @@
     <title>Admin Page</title>
     <link rel="stylesheet" href="admin.css">
 
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
 </head>
 <body>
-    <header>
-        <!-- navbar-start -->
-        <div class="navbar">
-           <div class="navbar-kanan">
-                <img src="../img/user-icon.png" width="20" >
-           </div>
-
-           <div class="navbar-kiri">
-                <img src="../img/nintendo-black.png" width="100">
-           </div>
-        </div>
-    <!-- navbar-end -->
-    </header> 
+    <!-- nav-start -->
+    <?php require('partials/nav-admn.php'); ?>
+    <!-- nav-end -->
     
     <main>  
         <!-- content-start -->
@@ -36,11 +29,19 @@
                 <br><br>
 
                 <button class="done-btn" type="submit" name="done">Done</button>
+            <!-- fungsi admin yang belum ditambahin, dan belum berfungsi -->
+                <!-- add artikel -->
+                <!-- add foto di article -->
+                <!-- add foto di home -->
+                <!-- add foto di home -->
+                <!-- add fitur edt -->
+                <!-- add fitur hapus -->
+
             </form>
         <!-- content-end -->
         <br><br>
         <div class="logout-btn">
-            <p><a href="../index/index.html">Logout?</a></p>
+            <p><a href="../home/home.php">Logout?</a></p>
         </div>    
         
     </main>        

@@ -1,0 +1,101 @@
+*,html,h4{
+    margin: 0;
+    padding: 0;
+    font-family: "museo-sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* nav-start */
+.navbar-kanan {
+    padding-top: 10px;
+}
+/* nav-end */
+
+/* header-start */
+.header-wrapper p{
+    margin-bottom: 0;
+}
+
+
+.header-wrapper{
+    color: #929299;
+    background-color: #484848;
+    padding: 187px 160px;
+}
+
+.right-content{
+    display: flex;
+    justify-content: end;
+    padding-top: 57px;
+}
+/* header-end */
+
+main{
+    background-color: #aaa7a7;
+    padding: 225px 0 225px 0;
+}
+
+/* content-start */
+.card{
+    border: none;
+}
+
+.card-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 163px;
+}
+
+.card-img-top{
+    padding: 17px 21px;
+    background-color: #3E3E3E;    
+}
+
+.card-body{
+    background-color: #3e3e3e;
+
+}
+
+.card-title{
+    text-align: center;
+    color: white;
+}
+
+.card-text{
+    padding: 12px;
+    color: white;
+}
+
+.btn-primary{
+    background-color: #736E6E;
+    border: none;
+}
+
+.btn-primary:hover{
+    background-color: #dfdfdf;
+    color: black;
+}
+/* content-end */
+
+/* footer-start */
+footer{
+    height: 244px;
+    background-color: #484848;
+}
+
+.footer-content{
+    display: flex;
+    justify-content : center;
+    gap: 32px;
+    padding: 94px 0;
+}
+
+.footer-content a{
+    color: #929292;
+}
+
+.text{
+    text-align: center;
+    color: white;
+}
+/* footer-end */

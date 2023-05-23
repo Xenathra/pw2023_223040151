@@ -1,56 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/8531b50185.js" crossorigin="anonymous"></script>
-    
-</head>
-
-<body>
-    <!-- Navbar-start -->
-    <div class="navbar">
-        <!-- navbar kanan -->
-        <div class="navbar-kanan">
-            <ul>
-                <a href="../login/login.php"><li><img src="../img/user-icon.png" width="20"></li></a>    
-            </ul>
-        </div>
-        <!-- navbar kiri -->
-        <div class="navbar-kiri">
-            <ul>
-                <li><img src="../img/nintendo-black.png" width="100"></li>
-            </ul>
-        </div>
-    </div>
-    <!-- Navbar-end -->
-    <div class="scnd-nav">
-                
-        <a href="#isi1">Console</a>
-        <a href="#isi2">Sejarah</a>
-        <a href="#isi3">Nintendo Switch</a>
-        <a href="#isi4">Jenis-Jenis</a>
-        <a href="#isi5">Spesifikasi </a>
-        <a href="#isi6">Best Nintendo Switch game</a>
-
-    </div>
- 
     <div class="content-wrapper">        
         <main>
         <!-- detail item -->
         <br id="isi1"><br><br><br>
             <ul>
-        <div class="container">                
+        <div class="containers">                
                 <!-- content-1 -->
                 <li>Apa itu Video Game Console?</li>
                 <!-- isi -->
                 <p>Video Game Console adalah sebuah mesin elektronik yang dirancang khusus untuk memainkan permainan video. Perangkat penampil grafiknya dapat berupa monitor atau televisi, alat untuk menggerakan atau mengendalikan nya disebut CONTROLLER. Konsol permainan pertama kali ATARI, kemudian dilanjutkan dengan NINTENDO yang sampai merajai pada tahung 1985-1989. Video Game Console modern saat ini ada PLAYSTATION buatan SONY dan XBOX buatan MICROSOFT. Console yang berdimensi kecil dan memudahkan kita untuk dibawah kemana-mana disebut Console PORTABLE, contohnya disaat tahun 2005 yaitu PLAYSTATION PORTABLE atau sering di sebut psp yang produksi oleh PLAYSTATION, dan NINTENDO DS yang diproduksi oleh Nintendo yang dibuat pada tahun 2004.</p>
         </div>
         <br id="isi2"><br><hr><br><br>
-        <div class="container">
+        <div class="containers">
                 <!-- content-2 -->
                 <li id="isi">Sejarah Nintendo</li>
                 <!-- isi-1 -->
@@ -59,7 +19,7 @@
                 <p>Didirikan pada 23 september 1889 oleh Fusajiro Yamauchi, awalnya perusahaan ini memproduksi kartu buatan tangan hanafuda (permainan kartu Jepang). Pada tahun 1963, perusahaan tersebut telah mencoba bisnis ceruk kecil, seperti layanan taksi dan hotel cinta. Meninggalkan usaha sebelumnya demi mainan pada tahun 1960an, Nintendo berkemang menjadi perusahaan permainan video pada dekade 1070an. Ditambah sejak 1980an dari divisi besar seperti Nintendo of America dan Ninendo of Europe, pada akhirnya menjadi salah satu industri yang paling berpengaruh dan perusahaan yang paling berharga di jepang dengan jumlah pasar sebesar $37 miliar pada tahun 2018.</p>
         </div>
         <br id="isi3"><br><hr><br><br>      
-        <div class="container">
+        <div class="containers">
                 <!-- content-3 -->
                 <li>Nintendo Switch</li>
                 <img class="img1" src="../img/switch-console.jpg" alt="nintendoswitchconsole" width="400">
@@ -67,7 +27,7 @@
         </div>
         <br id="isi4"><br><hr><br><br>     
                 <!-- content-4 -->
-        <div class="container">
+        <div class="containers">
                     <li>Jenis-Jenis Nintendo Switch</li>
                         <p style="font-weight: bold;">Nintendo Switch V1 (Old)</p>
                         <!-- penjelasan isi-1-start -->
@@ -91,7 +51,7 @@
                         <!-- penjelasan isi-4-end -->
         </div>
         <br id="isi5"><br><hr><br><br> 
-        <div class="container">   
+        <div class="containers">   
                 <!-- content-5 -->
                 <li>Spesifikasi</li>
                 <p><span>Sceeen</span> - Multi-touch screen, 6.2 inch LCD, 1280x720 resolution</p>
@@ -111,7 +71,7 @@
                 <p><span>Battery Charging Time</span> - 3 Hours (approx - when the console is in sleep mode)</p> 
         </div>
         <br id="isi6"><br><hr><br><br>     
-        <div class="container">
+        <div class="containers">
                 <!-- content-6 -->
                 <li>Best Nintendo Game</li>
                 <!-- game-1 -->
@@ -134,26 +94,3 @@
             <br><hr>
         </main>
     </div>
-</body>
-<!-- footer-start -->
-<footer>
-    <br >
-    <div class="footer-wrapper">
-        <div class="footer-content">            
-            
-            <a href="https://www.instagram.com/adrianzidan24/" target="_blank">
-                <i class="fa-brands fa-instagram fa-2xl"></i>           
-             </a>
-            <a href="https://wa.me/081388387567" target="_blank">
-                <i class="fa-brands fa-whatsapp fa-2xl"></i>
-            </a>
-            
-        </div>
-        <div class="copyright">
-                <p>copyright ©2023. Designed By <span>AdrianZidan</span></p> 
-        </div>
-    </div>
-
-</footer>
-<!-- footer-end -->
-</html>

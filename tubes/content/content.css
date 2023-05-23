@@ -7,67 +7,25 @@
 
 body{
     background-image: url('../img/home.jpg');
-    /* background-size: cover; */
+    background-size: cover; 
     /* background-position: center; */
 }
 
 /* navbar start */
-.navbar{
-    background-color: white;
-    height: 10px;
-    font-size: 20px;
-    padding: 20px 24px;
-    opacity: 0.8;
-    margin-bottom: 30px;
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    width: 100%;
+.navbar-brand{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
+.navbar-kanan ul{
+    list-style-type: none;
 }
 
 .navbar-kanan{
-    float: right;
-    margin-right: 40px;
-    list-style: none;
+    padding-top: 10px;
 }
 
-.navbar-kiri li{
-    float: left;
-}
-
-.navbar ul{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-    color: rgb(108, 107, 107);
-}
-
-.scnd-nav{
-    width: 100%;
-    background-color: #3e3e3e;
-    margin-top: 50px;
-    opacity: 0.8;
-    text-align: center;
-    font-size: 20px;
-    border-top: 1px solid #ffffff;
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    cursor: pointer;
-    height: 50px;
-}
-
-.scnd-nav a{
-    color: white ;
-    margin: 12px;
-    display: inline-block;
-}
-
-.scnd-nav a:hover{
-    border-bottom: 3px solid #adadad;
+.dropdown-item.active, .dropdown-item:active{
+    background-color: #ccc !important;
 }
 /* navbar end */
 
@@ -82,7 +40,7 @@ a{
     
 }
 
-.container{
+.containers{
     background-color: #d8d8d8;
     border-radius: 15px;
     padding: 12px;
@@ -113,28 +71,24 @@ span{
 
 /* footer-start */
 footer{
-    position: absolute;
-    background: #3e3e3e;
-    height: auto;
-    width: 100vw;
-    padding-top: 10px;
-    opacity: 0.9;
+    height: 244px;
+    background-color: #484848;
 }
 
 .footer-content{
     display: flex;
-    justify-content: center;
-    padding: 30px 47%;
+    justify-content : center;
+    gap: 32px;
+    padding: 94px 0;
 }
 
 .footer-content a{
-    color: white;
-    margin: 0 12px;
+    color: #929292;
 }
 
-.copyright{
-    color: white;
+.text{
     text-align: center;
+    color: white;
 }
 /* footer-end */
 
