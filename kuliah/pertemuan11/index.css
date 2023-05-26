@@ -1,0 +1,17 @@
+body{
+    background-color: #aebcc9;
+}
+
+.btn:hover{
+    background-color: #abb6bf !important;
+    color: #000;
+    transition: 1.5s;
+}
+
+.btn{
+    color: white;
+}
+
+.badge{
+    text-decoration: none;
+}

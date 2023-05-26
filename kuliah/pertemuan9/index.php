@@ -22,5 +22,5 @@ $judul = "Home";
     require('views/index.view.php');
 
 ?>
- 
+
 
