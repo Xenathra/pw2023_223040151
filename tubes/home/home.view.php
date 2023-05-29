@@ -1,3 +1,9 @@
+    <?php 
+    require '../functions.php';
+
+    $home_cont = query('SELECT * FROM home_content');
+    ?>
+    
     <!-- header-start -->
     <?php require('partials/home-header.php'); ?>
     <!-- header-end -->
@@ -24,7 +30,21 @@
     </header>
 
     <!-- content-start -->
-    <?php require('partials/home-cont.php'); ?>
+    <main id="content">
+<?php foreach( $home_cont as $h_cont) : ?>
+        <div class="card-wrapper">
+            <div class="card" style="width: 18rem;">
+                <img src="../img/<?= $h_cont['gambar']; ?>" class="card-img-top" alt="switch-console">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $h_cont['judul']; ?></h5>
+                    <p class="card-text"><?= $h_cont['teast_detail']; ?></p>
+                    <a href="../content/content.php" class="btn btn-primary">Click for more</a>
+                </div>
+            </div>
+<?php endforeach; ?>
+            
+        </div>
+    </main>
     <!-- content-end -->
     
     <!-- footer-start -->

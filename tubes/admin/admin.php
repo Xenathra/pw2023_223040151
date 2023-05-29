@@ -41,7 +41,7 @@
         <!-- content-end -->
         <br><br>
         <div class="logout-btn">
-            <p><a href="../home/home.php">Logout?</a></p>
+            <p><a href="../home/home.view.php">Logout?</a></p>
         </div>    
         
     </main>        
