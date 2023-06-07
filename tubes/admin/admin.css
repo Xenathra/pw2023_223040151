@@ -31,6 +31,29 @@ main{
     opacity: 0.9;
 }
 
+
+.content-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cont1 input{
+    border-radius: 5px;
+    padding-right: 100px;
+}
+
+.cont1{
+    display: flex;
+    flex-direction: column;
+}
+
+.cont2{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 .colmn1{
     display: flex;
     font-weight: bold;

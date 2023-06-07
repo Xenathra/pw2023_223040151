@@ -35,6 +35,11 @@ main{
 }
 
 /* content-start */
+/* .content{
+    display: felx;
+    flex-wrap: wrap !important;
+} */
+
 .card{
     border: none;
 }

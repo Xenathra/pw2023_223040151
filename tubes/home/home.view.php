@@ -34,11 +34,11 @@
 <?php foreach( $home_cont as $h_cont) : ?>
         <div class="card-wrapper">
             <div class="card" style="width: 18rem;">
-                <img src="../img/<?= $h_cont['gambar']; ?>" class="card-img-top" alt="switch-console">
+                <img id="gambar" src="../img/<?= $h_cont['gambar']; ?>" class="card-img-top" alt="switch-console">
                 <div class="card-body">
-                    <h5 class="card-title"><?= $h_cont['judul']; ?></h5>
-                    <p class="card-text"><?= $h_cont['teast_detail']; ?></p>
-                    <a href="../content/content.php" class="btn btn-primary">Click for more</a>
+                    <h5 id="judul" class="card-title"><?= $h_cont['judul']; ?></h5>
+                    <p id="teast_detail" class="card-text"><?= $h_cont['teast_detail']; ?></p>
+                    <a href="../content/content.php?id=<?= $h_cont['id'] ;?>" class="btn btn-primary">Click for more</a>
                 </div>
             </div>
 <?php endforeach; ?>

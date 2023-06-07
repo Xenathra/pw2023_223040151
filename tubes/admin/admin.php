@@ -1,3 +1,34 @@
+<?php 
+// konkesi ke DBMS   
+require '../functions.php';
+
+// cek jika tombol done/submit sudah di pencet
+if ( isset ($_POST["submit"]) ){
+    
+    // cek apakah data berhasil ditambahkan atau tidak
+    if( tambah($_POST) > 0) {
+        echo "
+            <script>
+                alert('Data berhasil ditambahkan!');
+                document.location.href = '../home/home.view.php';
+            </script>
+            ";
+    } else {
+        echo"
+            <script>
+                alert('Data gagal ditambahkan!');
+                document.location.href = '../content/content.php';
+            </script>
+            ";
+    }
+
+
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,22 +51,54 @@
         <!-- content-start -->
         <h1>Welcome, Admin</h1>
         <br><br>
-        <h3>Add an article</h3>
+        <h3>Add an content</h3>
         <br><br>
             <form action="" method="post">
-                <label class="colmn1" for="add-txt">Add here :</label>
-                <textarea name="add-txt" id="add-txt" cols="50" rows="10"></textarea>
-                
-                <br><br>
+            <div class="content-wrapper">
+                <!-- fitur add content di home.view.php-start -->
+                <div class="cont1">
+                    <label for="gambar">Gambar :</label>
+                    <input type="text" id = "gambar" name="gambar" > <!-- belum bisa input gambar -->
+                    <label for="judul">Judul :</label>
+                    <input type="text" id = "judul" name="judul" >
+                    <label for="teast_detail">Teast detail :</label>
+                    <input type="text" id = "teast_detail" name="teast_detail" >
+                    <!-- fitur add content di home.view.php-end -->
+                </div>
 
-                <button class="done-btn" type="submit" name="done">Done</button>
+                <!-- add judul-start -->
+                <div class="cont2">
+                    <label for="judul">Judul</label>
+                    <input type="text" id="judul" name="judul">
+                    <!-- br untuk sementara -->
+                    <br>
+                    <label for="sub_judul">Sub judul</label>
+                    <input type="text" id="sub_judul" name="sub_judul">
+                    <!-- add judul-end -->
+
+                    <label class="colmn1" for="isi">isi :</label>
+                    <textarea name="isi" id="isi" cols="50" rows="10"></textarea>
+                </div>
+            </div>
+
+                <button class="done-btn" type="submit" name="submit">
+                    Done
+                </button>
+
             <!-- fungsi admin yang belum ditambahin, dan belum berfungsi -->
-                <!-- add artikel -->
+                <!-- add artikel -done -->
                 <!-- add foto di article -->
-                <!-- add foto di home -->
-                <!-- add foto di home -->
+                <!-- add foto di home -done-->
+                <!-- add detail teast content di home -done-->
                 <!-- add fitur edt -->
                 <!-- add fitur hapus -->
+
+                
+
+
+
+
+
 
             </form>
         <!-- content-end -->
