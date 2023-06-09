@@ -78,7 +78,7 @@ function tambah ($data) {
     function edit ($data){
         global $conn;
 
-        $pengenal = $data["id"];
+        $id = $data["id"];
         $gambar = htmlspecialchars($data["gambar"]);
         $judul = htmlspecialchars($data["judul"]);
         $teast_detail = htmlspecialchars($data["teast_detail"]);
@@ -87,10 +87,13 @@ function tambah ($data) {
                     gambar = '$gambar',
                     judul = '$judul',
                     teast_detail = '$teast_detail'
-                WHERE id = $pengenal    
+                WHERE id = $id    
             ";
     mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+    return mysqli_affected_rows($conn);
     }
 
+    
 
 ?>

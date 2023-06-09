@@ -3,11 +3,10 @@
 require 'functions.php';
 
     //ambil data di url
-    $pengenal = $_GET['id'];
-    var_dump($pengenal);
+    $id = $_GET['id'];
     
     // querry data bedasarkan id
-    $edit = query('SELECT * FROM home_content WHERE id = "$id"');
+    $edit = query("SELECT * FROM home_content WHERE id = $id")[0];
     
 // cek jika tombol done/submit sudah di pencet
 if ( isset ($_POST["done"]) ){
@@ -17,14 +16,14 @@ if ( isset ($_POST["done"]) ){
         echo "
             <script>
                 alert('Data berhasil edit!');
-                document.location.href = '../home/home.view.php';
+                document.location.href = 'home/home.view.php';
             </script>
             ";
     } else {
         echo"
             <script>
                 alert('Data gagal edit!');
-                document.location.href = '../home/home.view.php';
+                document.location.href = 'home/home.view.php';
             </script>
             ";
     }
@@ -75,16 +74,19 @@ if ( isset ($_POST["done"]) ){
             <form action="" method="post">
             <div class="content-wrapper">
                 <div class="cont1">
-                    <input type="hidden" id="id" name="id" value="<?= $pengenal['id'] ;?>">
+                    <input type="hidden" id="id" name="id" value="<?= $edit['id'] ;?>">
                     <label for="gambar">Gambar :</label>
-                    <input type="text" id = "gambar" name="gambar" value="<?= $pengenal['gambar'] ;?>" > 
+                    <input type="text" id = "gambar" name="gambar" value="<?= $edit['gambar'] ;?>" > 
                     <label for="judul">Judul :</label>
-                    <input type="text" id = "judul" name="judul" value="<?= $pengenal['judul'] ;?>" >
+                    <input type="text" id = "judul" name="judul" value="<?= $edit['judul'] ;?>" >
                     <label for="teast_detail">Teast detail :</label>
-                    <input type="text" id = "teast_detail" name="teast_detail" value="<?= $pengenal['teast_detail'] ;?>" >
+                    <input type="text" id = "teast_detail" name="teast_detail" value="<?= $edit['teast_detail'] ;?>" >
                 </div>                
             </div>
                 <button class="done-btn" type="submit" name="done">
                     Done
                 </button>
                 </form>
+    </main>
+</body>
+</html>

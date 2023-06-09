@@ -1,6 +1,6 @@
     <?php 
     require '../functions.php';
-    
+
     
 
     $home_cont = query('SELECT * FROM home_content');
@@ -43,7 +43,7 @@
                     <a href="../content/content.php?id=<?= $h_cont['id'] ;?>" class="btn btn-primary">Click for more</a>
                     <a href="../hapus.php?id=<?= $h_cont['id'] ;?> " class="btn btn-primary" onclick="return confirm('apakah anda yakin?');">Delete</a>
                     <!-- fitur edit-start -->
-                    <a class="btn btn-primary" href="../edit.php?=<?= $h_cont['id'] ;?>">Edit</a>
+                    <a class="btn btn-primary" href="../edit.php?id=<?= $h_cont['id'] ;?>">Edit</a>
                     <!-- fitur edit-end -->
                 </div>
             </div>
