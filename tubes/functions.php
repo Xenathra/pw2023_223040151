@@ -38,7 +38,7 @@ function tambah ($data) {
 
     $query = "INSERT INTO console_content
                 VALUES
-                (null,'$id_console_content', '$judul','$sub_judul','$isi')
+                (null, '$id_console_content', '$judul','$sub_judul', '$isi')
             ";
     mysqli_query($conn, $query) or die(mysqli_error($conn));
 
@@ -69,6 +69,8 @@ function tambah ($data) {
         global $conn;   
         mysqli_query($conn, "DELETE FROM home_content WHERE id = $id") or die(mysqli_error($conn));
 
+        mysqli_query($conn, "DELETE FROM console_content WHERE id = $id") or die(mysqli_error($conn));
+
         return mysqli_affected_rows($conn);
     }
 
@@ -76,7 +78,7 @@ function tambah ($data) {
     function edit ($data){
         global $conn;
 
-        $id = $data["id"];
+        $pengenal = $data["id"];
         $gambar = htmlspecialchars($data["gambar"]);
         $judul = htmlspecialchars($data["judul"]);
         $teast_detail = htmlspecialchars($data["teast_detail"]);
@@ -85,7 +87,7 @@ function tambah ($data) {
                     gambar = '$gambar',
                     judul = '$judul',
                     teast_detail = '$teast_detail'
-                WHERE id = $id    
+                WHERE id = $pengenal    
             ";
     mysqli_query($conn, $query) or die(mysqli_error($conn));
     }

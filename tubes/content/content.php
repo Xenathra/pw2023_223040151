@@ -6,6 +6,9 @@
         $content_cons = query('SELECT * FROM console_content');
         $content_cons = query("SELECT * FROM console_content 
                             WHERE id_console_content = '$id'");
+
+        $edit = query('SELECT * FROM console_content WHERE id = "$id"');
+
 ?>
 
 <!DOCTYPE html>
@@ -45,8 +48,12 @@
                 <!-- subjudul -->
                 <p style="font-weight: bold;"><?= $c_cons['sub_judul'] ;?></p>
                 <!-- isi -->
+                <!-- hapus -->
                 <p><?= $c_cons['isi'] ;?></p>
-                
+                <a href="../hapus.php?id=<?= $c_cons['id'] ;?> " class="btn btn-secondary" onclick="return confirm('apakah anda yakin?');">Delete</a>
+                <!-- edit -->
+                <a class="btn btn-secondary" href="../edit.php?=<?= $c_cons['id'] ;?>">Edit</a>
+
         </div>
         <!-- note untuk content -->
         </ul>

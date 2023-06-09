@@ -1,6 +1,6 @@
     <?php 
     require '../functions.php';
-
+    
     
 
     $home_cont = query('SELECT * FROM home_content');
@@ -36,7 +36,7 @@
 <?php foreach( $home_cont as $h_cont) : ?>
         <div class="card-wrapper">
             <div class="card" style="width: 18rem;">
-                <img id="gambar" src="../img/<?= $h_cont['gambar']; ?>" class="card-img-top" alt="switch-console">
+                <img id="gambar" src="../img/<?= $h_cont['gambar']; ?>" class="card-img-top" alt="switch-console" width="412">
                 <div class="card-body">
                     <h5 id="judul" class="card-title"><?= $h_cont['judul']; ?></h5>
                     <p id="teast_detail" class="card-text"><?= $h_cont['teast_detail']; ?></p>

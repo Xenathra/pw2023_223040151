@@ -48,12 +48,12 @@
         <!-- content-start -->
         <h1>Welcome, Admin</h1>
         <br><br>
-        <h3>Add an content</h3>
+        <h3>Add existing content</h3>
         <br><br>
             <div class="container">
                 <form action="" method="post">
                     <select name="add" id="add">
-                        <option selected>judul</option>
+                        <option selected>Choose</option>
                     <?php foreach($judul as $judul) :?>
                         <option value="<?= $judul['id'] ;?>">
                             <?= $judul['judul'] ;?>
@@ -67,6 +67,9 @@
                     <br><br>
                     <label for="sub_judul">Sub judul</label>
                     <input type="text" id="sub_judul" name="sub_judul">
+                    <br><br>
+                    <label for="gambar_console_content">Gambar</label>
+                    <input type="text" id="gambar_console_content" name="gambar_console_content">
                     <!-- add judul-end -->
                     <br><br>
                     <label class="colmn1" for="isi">isi :</label>

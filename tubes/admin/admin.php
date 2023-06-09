@@ -75,6 +75,7 @@ if ( isset ($_POST["submit"]) ){
                     <br>
                     <label for="sub_judul">Sub judul</label>
                     <input type="text" id="sub_judul" name="sub_judul">
+
                     <!-- add judul-end -->
 
                     <label class="colmn1" for="isi">isi :</label>

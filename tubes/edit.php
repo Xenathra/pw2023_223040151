@@ -3,13 +3,14 @@
 require 'functions.php';
 
     //ambil data di url
-    $id = $_GET['id'];
-
+    $pengenal = $_GET['id'];
+    var_dump($pengenal);
+    
     // querry data bedasarkan id
-    $edit = query("SELECT * FROM home_content WHERE id = $id");
-
+    $edit = query('SELECT * FROM home_content WHERE id = "$id"');
+    
 // cek jika tombol done/submit sudah di pencet
-if ( isset ($_POST["submit"]) ){
+if ( isset ($_POST["done"]) ){
     
     // cek apakah data berhasil diedit atau tidak
     if( edit($_POST) > 0) {
@@ -73,16 +74,14 @@ if ( isset ($_POST["submit"]) ){
         <br><br>
             <form action="" method="post">
             <div class="content-wrapper">
-                <!-- fitur add content di home.view.php-start -->
                 <div class="cont1">
-                    <input type="hidden" name="id" value="<?= $edit['id'] ;?>">
+                    <input type="hidden" id="id" name="id" value="<?= $pengenal['id'] ;?>">
                     <label for="gambar">Gambar :</label>
-                    <input type="text" id = "gambar" name="gambar" value="<?= $edit['gambar'] ;?>" > <!-- belum bisa input gambar -->
+                    <input type="text" id = "gambar" name="gambar" value="<?= $pengenal['gambar'] ;?>" > 
                     <label for="judul">Judul :</label>
-                    <input type="text" id = "judul" name="judul" value="<?= $edit['judul'] ;?>" >
+                    <input type="text" id = "judul" name="judul" value="<?= $pengenal['judul'] ;?>" >
                     <label for="teast_detail">Teast detail :</label>
-                    <input type="text" id = "teast_detail" name="teast_detail" value="<?= $edit['teast_detail'] ;?>" >
-                    <!-- fitur add content di home.view.php-end -->
+                    <input type="text" id = "teast_detail" name="teast_detail" value="<?= $pengenal['teast_detail'] ;?>" >
                 </div>                
             </div>
                 <button class="done-btn" type="submit" name="done">
