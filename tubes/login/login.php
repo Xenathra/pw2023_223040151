@@ -45,6 +45,10 @@
                     <!-- LoginButton-start -->
                     <button type="submit" name="submit">Login</button>
                     <!-- LoginButton-end -->
+
+                    <p>
+                        Dont have any account? <a href="../register/register.php">Register here</a>
+                    </p>
         </form>
     <!-- form-end -->
      </div>  

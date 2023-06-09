@@ -1,0 +1,51 @@
+body{
+    color: #3c3c3c;
+    font-family: "museo-sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.72;
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 150px;
+    background-image: url(../img/home.jpg) ;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block; 
+    border: none; 
+    box-sizing: border-box;
+    background-color: rgba(230, 230, 230, 0.1);
+    border-bottom: 1px solid #3c3c3c;
+    color: #000000; 
+}
+
+button {
+    background-color: #4c4c4c;             
+    color: white;
+    border-radius: 15px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font: 14px;
+}
+
+/* button animation-start */
+button:hover { /* hover on */
+    transition: 0.5s ease-in-out;
+    background: #bfbfbf;
+    color: #3c3c3c;
+}
+
+button { /* hover off */
+    transition: 0.5s ease-out;
+}

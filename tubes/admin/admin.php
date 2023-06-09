@@ -17,13 +17,33 @@ if ( isset ($_POST["submit"]) ){
         echo"
             <script>
                 alert('Data gagal ditambahkan!');
+                document.location.href = '../home/home.view.php';
+            </script>
+            ";
+    }
+}
+
+if ( isset ($_POST["done"]) ){
+    $error = add($_POST);
+    // cek apakah data berhasil ditambahkan atau tidak
+    if($error['error'] == false) {
+        $id = $error['id'];
+        echo "
+            <script>
+                alert('Data berhasil ditambahkan!');
+                document.location.href = '../content/content.php?id=" . $id .   "';
+            </script>
+            ";
+    } else {
+        echo"
+            <script>
+                alert('Data gagal ditambahkan!');
                 document.location.href = '../content/content.php';
             </script>
             ";
     }
-
-
 }
+$judul = query("SELECT * FROM home_content");
 
 
 ?>
@@ -80,26 +100,43 @@ if ( isset ($_POST["submit"]) ){
                     <textarea name="isi" id="isi" cols="50" rows="10"></textarea>
                 </div>
             </div>
-
-                <button class="done-btn" type="submit" name="submit">
+                <button class="done-btn" type="submit" name="done">
                     Done
                 </button>
+                <!-- fungsi admin yang belum ditambahin, dan belum berfungsi -->
+                    <!-- add artikel -done -->
+                    <!-- add foto di article -->
+                    <!-- add foto di home -done-->
+                    <!-- add detail teast content di home -done-->
+                    <!-- add fitur edt -->
+                    <!-- add fitur hapus -->
+                <!-- kasih button untuk toggle ke hidden form, form untuk nambah yang sudah ada  -->
 
-            <!-- fungsi admin yang belum ditambahin, dan belum berfungsi -->
-                <!-- add artikel -done -->
-                <!-- add foto di article -->
-                <!-- add foto di home -done-->
-                <!-- add detail teast content di home -done-->
-                <!-- add fitur edt -->
-                <!-- add fitur hapus -->
+            </form>
+            <div class="toogle-form">
+                <form action="" method="post">
+                    <select name="add" id="add">
+                        <option selected>judul</option>
+                        <?php foreach($judul as $judul) :?>
+                            <option value="<?= $judul['id'] ;?>"><?= $judul['judul'] ;?></option>
+                            <?php endforeach; ?>
+                    </select>
+                    <br>
+                    <label for="judul">Judul</label>
+                    <input type="text" id="judul" name="judul">
+                    <!-- br untuk sementara -->
+                    <br>
+                    <label for="sub_judul">Sub judul</label>
+                    <input type="text" id="sub_judul" name="sub_judul">
+                    <!-- add judul-end -->
 
+                    <label class="colmn1" for="isi">isi :</label>
+                    <textarea name="isi" id="isi" cols="50" rows="10"></textarea>
                 
-
-
-
-
-
-
+            </div>
+            <button class="done-btn" type="submit" name="done">
+                    Done
+                </button>
             </form>
         <!-- content-end -->
         <br><br>

@@ -39,6 +39,7 @@
                     <h5 id="judul" class="card-title"><?= $h_cont['judul']; ?></h5>
                     <p id="teast_detail" class="card-text"><?= $h_cont['teast_detail']; ?></p>
                     <a href="../content/content.php?id=<?= $h_cont['id'] ;?>" class="btn btn-primary">Click for more</a>
+                    <a href="../hapus.php?id=<?= $h_cont['id'] ;?> " class="btn btn-primary ms-5" onclick="return confirm('apakah anda yakin?');">Delete</a>
                 </div>
             </div>
 <?php endforeach; ?>
