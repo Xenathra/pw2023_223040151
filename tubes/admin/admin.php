@@ -23,27 +23,6 @@ if ( isset ($_POST["submit"]) ){
     }
 }
 
-if ( isset ($_POST["done"]) ){
-    $error = add($_POST);
-    // cek apakah data berhasil ditambahkan atau tidak
-    if($error['error'] == false) {
-        $id = $error['id'];
-        echo "
-            <script>
-                alert('Data berhasil ditambahkan!');
-                document.location.href = '../content/content.php?id=" . $id .   "';
-            </script>
-            ";
-    } else {
-        echo"
-            <script>
-                alert('Data gagal ditambahkan!');
-                document.location.href = '../content/content.php';
-            </script>
-            ";
-    }
-}
-$judul = query("SELECT * FROM home_content");
 
 
 ?>
@@ -60,6 +39,8 @@ $judul = query("SELECT * FROM home_content");
 
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/8531b50185.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -103,41 +84,23 @@ $judul = query("SELECT * FROM home_content");
                 <button class="done-btn" type="submit" name="done">
                     Done
                 </button>
+                </form>
+            <div class="more">
+            <a href="add_more.php">
+                <i class="fa-solid fa-arrow-right fa-2xl"></i>
+            </a>
+            </div>
                 <!-- fungsi admin yang belum ditambahin, dan belum berfungsi -->
                     <!-- add artikel -done -->
                     <!-- add foto di article -->
                     <!-- add foto di home -done-->
                     <!-- add detail teast content di home -done-->
                     <!-- add fitur edt -->
-                    <!-- add fitur hapus -->
+                    <!-- add fitur hapus-done -->
                 <!-- kasih button untuk toggle ke hidden form, form untuk nambah yang sudah ada  -->
+            
 
-            </form>
-            <div class="toogle-form">
-                <form action="" method="post">
-                    <select name="add" id="add">
-                        <option selected>judul</option>
-                        <?php foreach($judul as $judul) :?>
-                            <option value="<?= $judul['id'] ;?>"><?= $judul['judul'] ;?></option>
-                            <?php endforeach; ?>
-                    </select>
-                    <br>
-                    <label for="judul">Judul</label>
-                    <input type="text" id="judul" name="judul">
-                    <!-- br untuk sementara -->
-                    <br>
-                    <label for="sub_judul">Sub judul</label>
-                    <input type="text" id="sub_judul" name="sub_judul">
-                    <!-- add judul-end -->
-
-                    <label class="colmn1" for="isi">isi :</label>
-                    <textarea name="isi" id="isi" cols="50" rows="10"></textarea>
-                
-            </div>
-            <button class="done-btn" type="submit" name="done">
-                    Done
-                </button>
-            </form>
+            
         <!-- content-end -->
         <br><br>
         <div class="logout-btn">

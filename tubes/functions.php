@@ -72,5 +72,23 @@ function tambah ($data) {
         return mysqli_affected_rows($conn);
     }
 
+// edit artikel
+    function edit ($data){
+        global $conn;
+
+        $id = $data["id"];
+        $gambar = htmlspecialchars($data["gambar"]);
+        $judul = htmlspecialchars($data["judul"]);
+        $teast_detail = htmlspecialchars($data["teast_detail"]);
+
+        $query = "UPDATE home_content SET
+                    gambar = '$gambar',
+                    judul = '$judul',
+                    teast_detail = '$teast_detail'
+                WHERE id = $id    
+            ";
+    mysqli_query($conn, $query) or die(mysqli_error($conn));
+    }
+
 
 ?>

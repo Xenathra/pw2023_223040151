@@ -1,4 +1,4 @@
-<nav style="background-color: #929292;" class="navbar navbar-expand-lg">
+<nav style="background-color: #929292;" class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bolder" href="#">EGN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
