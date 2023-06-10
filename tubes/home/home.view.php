@@ -35,16 +35,17 @@
     </header>
 
     <!-- content-start -->
+    
+    <main id="content">
     <?php if(empty($home_cont)) :?>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 position-absolute top-55 start-50 translate-middle">
             <div class="alert alert-danger" role="alert">
                 artikel not found!
             </div>
         </div>
     </div>
     <?php endif ;?>
-    <main id="content">
 <?php foreach( $home_cont as $h_cont) : ?>
         <div class="card-wrapper">
             <div class="card" style="width: 18rem;">

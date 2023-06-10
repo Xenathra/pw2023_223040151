@@ -44,6 +44,34 @@ if ( isset ($_POST["done"]) ){
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
+    <style>
+        /* done-btn-start */
+    .done-btn{
+        border-radius: 8px;
+        background: #949495;
+        color: white;
+        padding: 14px 20px;
+        cursor: pointer;
+        font-size: 14px;
+        width: 10%;
+        margin-top: 12px;
+        margin-left: 45%;
+    }
+
+    
+
+    .done-btn:hover { /* hover on */
+        transition: 1s ease-in-out;
+        background: #f7f7f9;
+        color: #3c3c3c;
+    }
+
+    .done-btn { /* hover off */
+        transition: 1s ease-out;
+    }
+    /* done-btn-end */
+    </style>
+
 </head>
 <body>
     <!-- nav-start -->
@@ -78,7 +106,8 @@ if ( isset ($_POST["done"]) ){
                 <div class="cont1">
                     <input type="hidden" id="id" name="id" value="<?= $edit['id'] ;?>">
                     <label for="gambar">Gambar :</label>
-                    <input type="file" id = "gambar" name="gambar" value="<?= $edit['gambar'] ;?>" > 
+                    <img src="img/<?= $edit['gambar'] ;?>">
+                    <input type="file" id = "gambar" name="gambar" > 
                     <label for="judul">Judul :</label>
                     <input type="text" id = "judul" name="judul" value="<?= $edit['judul'] ;?>" >
                     <label for="teast_detail">Teast detail :</label>

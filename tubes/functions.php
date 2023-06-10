@@ -51,46 +51,46 @@ function tambah ($data) {
 }
 
 // function upload
-    function upload(){
-        $namaFile = $_FILES['gambar']['name'];
-        $ukuranFile = $_FILES['gambar']['size'];
-        $error = $_FILES['gambar']['error'];
-        $tmpName = $_FILES['gambar']['tmp_name'];
+function upload(){
+    $namaFile = $_FILES['gambar']['name'];
+    $ukuranFile = $_FILES['gambar']['size'];
+    $error = $_FILES['gambar']['error'];
+    $tmpName = $_FILES['gambar']['tmp_name'];
 
-        //cek apakah tidak ada gambar yang di upload
-        if( $error === 4 ) {
-            echo "<script>
-                    alert('Pilih gambar terlebih dahulu')
-                    </script";
-            return false;
-        }
-
-        // cek apakah yang diupload hanya gambar
-        $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
-        $ekstensiGambar = explode('.', $namaFile);
-        $ekstensiGambar = strtolower( end($ekstensiGambar) );
-        if( !in_array($ekstensiGambar, $ekstensiGambarValid) ){
-            echo "<script>
-                    alert('Yang anda upload bukan GAMBAR!!')
-                    </script";
-            return false;
-        }
-
-        // cek jika ukuran file terlalu besar 
-        if( $ukuranFile > 1000000){
-            echo "<script>
-                    alert('Ukuran gambar anda terlalu besar!')
-                    </script";
-            return false;
-        }
-
-        // lolos pengecekan, gambar siap di upload
-        move_uploaded_file($tmpName, 'img/'. $namaFile);
-
-        return $namaFile;
-
-
+    //cek apakah tidak ada gambar yang di upload
+    if( $error === 4 ) {
+        echo "<script>
+                alert('Pilih gambar terlebih dahulu')
+                </script";
+        return false;
     }
+
+    // cek apakah yang diupload hanya gambar
+    $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
+    $ekstensiGambar = explode('.', $namaFile);
+    $ekstensiGambar = strtolower( end($ekstensiGambar) );
+    if( !in_array($ekstensiGambar, $ekstensiGambarValid) ){
+        echo "<script>
+                alert('Yang anda upload bukan GAMBAR!!')
+                </script";
+        return false;
+    }
+
+    // cek jika ukuran file terlalu besar 
+    if( $ukuranFile > 1000000){
+        echo "<script>
+                alert('Ukuran gambar anda terlalu besar!')
+                </script";
+        return false;
+    }
+
+    // lolos pengecekan, gambar siap di upload
+    move_uploaded_file($tmpName, 'img/'. $namaFile);
+
+    return $namaFile;
+
+
+}
 
 // add artikel yg udah ada
     function add($data){

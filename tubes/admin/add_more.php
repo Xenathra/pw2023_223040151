@@ -53,7 +53,7 @@
         <br>
             <div class="container">
                 <form action="" method="post">
-                    <select name="add" id="add">
+                    <select name="add" id="add" required>
                         <option selected>Choose</option>
                     <?php foreach($judul as $judul) :?>
                         <option value="<?= $judul['id'] ;?>">
@@ -63,18 +63,15 @@
                     </select>
                     <br>
                     <label for="judul">Judul</label>
-                    <input type="text" id="judul" name="judul">
+                    <input type="text" id="judul" name="judul" autocomplete="off">
                     <!-- br untuk sementara -->
                     <br><br>
                     <label for="sub_judul">Sub judul</label>
-                    <input type="text" id="sub_judul" name="sub_judul">
-                    <br><br>
-                    <label for="gambar_console_content">Gambar</label>
-                    <input type="text" id="gambar_console_content" name="gambar_console_content">
+                    <input type="text" id="sub_judul" name="sub_judul" autocomplete="off">
                     <!-- add judul-end -->
                     <br><br>
                     <label class="colmn1" for="isi">isi :</label>
-                    <textarea name="isi" id="isi" cols="50" rows="10"></textarea>
+                    <textarea name="isi" id="isi" cols="50" rows="10" autocomplete="off"></textarea>
                 
             </div>
                 <button class="done-btn" type="submit" name="done">
