@@ -27,6 +27,23 @@
     justify-content: end;
     padding-top: 57px;
 }
+
+.header-wrapper p{
+    font-size: 22px;
+}
+
+.header-wrapper h1{
+    font-weight: bold;
+}
+
+.header-wrapper span{
+    color: #000000;
+    font-weight: bolder;
+}
+
+.header-wrapper b{
+    color: #bababa;
+}
 /* header-end */
 
 main{
@@ -35,14 +52,10 @@ main{
 }
 
 /* content-start */
-/* .content{
-    display: felx;
-    flex-wrap: wrap !important;
-} */
+
 
 .card{
     border: none;
-    
 }
 
 .card-wrapper{

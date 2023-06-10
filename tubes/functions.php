@@ -94,6 +94,23 @@ function tambah ($data) {
     return mysqli_affected_rows($conn);
     }
 
-    
+    // function cari
+    function cari($keyword){
+        global $conn;
+
+        $query = "SELECT * FROM home_content
+                    WHERE judul LIKE '%$keyword%'
+                        OR  
+                        teast_detail LIKE '%$keyword%'
+                ";
+
+        $result = mysqli_query($conn, $query);
+        $rows = [];
+        while($row = mysqli_fetch_assoc($result) ) {
+            $rows[] = $row;
+            }
+                        
+        return $rows;
+    }
 
 ?>

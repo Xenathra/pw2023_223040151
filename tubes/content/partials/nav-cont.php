@@ -15,6 +15,7 @@
             <ul>
                 <a href="../login/login.php"><li><img src="../img/user-icon.png" width="20"></li></a>    
             </ul>
+            
         </div>
     </div>
 </nav>

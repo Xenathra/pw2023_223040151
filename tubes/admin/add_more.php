@@ -32,8 +32,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page</title>
+    <title>EGN | Admin</title>
     <link rel="stylesheet" href="admin.css">
+    <link rel="shortcut icon" href="../img/EGN.png" type="image/x-icon">
 
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -47,9 +48,9 @@
     <main>  
         <!-- content-start -->
         <h1>Welcome, Admin</h1>
-        <br><br>
+        <br>
         <h3>Add existing content</h3>
-        <br><br>
+        <br>
             <div class="container">
                 <form action="" method="post">
                     <select name="add" id="add">

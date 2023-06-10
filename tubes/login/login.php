@@ -13,11 +13,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login Form</title>
+    <title>EGN | Login</title>
 
     <link rel="stylesheet" href="login.css">
 
-
+    <link rel="shortcut icon" href="../img/EGN.png" type="image/x-icon">
 </head>
 <body>
 <div class="wrapper"> 
@@ -34,7 +34,7 @@
         <form action="" method="post">       
                     <!-- username-start -->
                     <label for="uname"><span class="text"><b>Username</b></label></span>
-                    <input type="text" id="uname" name="uname" required autocomplete="off">
+                    <input type="text" id="uname" name="uname" required autocomplete="off" autofocus>
                     <!-- username-end -->
                     
                     <!-- psw-start -->

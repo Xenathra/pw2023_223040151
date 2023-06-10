@@ -67,9 +67,11 @@ if ( isset ($_POST["done"]) ){
     
     <main>  
         <!-- content-start -->
-        <h1>Welcome, Admin</h1>
-        <br><br>
-        <h3>edit an content</h3>
+        <div class="title">
+            <h1>Welcome, Admin</h1>
+            <br><br>
+            <h3>Edit an content</h3>
+        </div>
         <br><br>
             <form action="" method="post">
             <div class="content-wrapper">

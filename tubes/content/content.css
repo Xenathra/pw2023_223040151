@@ -33,7 +33,7 @@ body{
 .content-wrapper{
     border: 1px solid transparent;
     color: #000000;
-    font-size: 18px;
+    font-size: 20px;
     text-align: justify;
     line-height: 28px;
     padding: 28px;
@@ -47,7 +47,7 @@ body{
 }
 
 .content-wrapper li{
-    font-size: 22px;
+    font-size: 26px;
     font-weight: bold;    
     list-style: none;
     margin-bottom: 20px;

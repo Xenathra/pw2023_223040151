@@ -12,6 +12,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#content">Content</a>
                     </li>
+                    <li class="nav-item">
+                    <div class="row">
+                        <div class="col-md">
+                        <form action="" method="post">
+                        <div class="input-group ">
+                            <input type="text" class="form-control" 
+                            placeholder="Search" name="keyword" id="keyword" autocomplete="off">
+                            <button style="background-color: #000;" class="btn btn-outline-secondary" type="submit" name="search" id="search">
+                                <i class="fa-solid fa-magnifying-glass"><a href="#content"></a></i>
+                            </button>
+                        </div>
+                        </form>
+                        </div>
+                    </div>
+                    </li>
                 </ul>
             </div>
             <div class="navbar-kanan">

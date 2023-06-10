@@ -3,7 +3,7 @@
 require '../functions.php';
 
 // cek jika tombol done/submit sudah di pencet
-if ( isset ($_POST["submit"]) ){
+if ( isset ($_POST["done"]) ){
     
     // cek apakah data berhasil ditambahkan atau tidak
     if( tambah($_POST) > 0) {
@@ -34,11 +34,12 @@ if ( isset ($_POST["submit"]) ){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page</title>
+    <title>EGN | Admin</title>
     <link rel="stylesheet" href="admin.css">
 
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../img/EGN.png" type="image/x-icon">
 
     <script src="https://kit.fontawesome.com/8531b50185.js" crossorigin="anonymous"></script>
 

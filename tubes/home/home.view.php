@@ -1,9 +1,12 @@
     <?php 
     require '../functions.php';
+    $home_cont = query("SELECT * FROM home_content");
 
-    
+    // when search button clikced
+    if( isset($_POST['search']) ){
+        $home_cont = cari($_POST['keyword']);
+    }
 
-    $home_cont = query('SELECT * FROM home_content');
     ?>
     
     <!-- header-start -->
@@ -18,11 +21,11 @@
     <!-- jumbotron-start -->
     <section class="jumbotron" id="home" >
         <div class="header-wrapper" >
-                <h1>Edukasi Games Nich</h1>
+                <h1><span>E</span>dukasi <span>G</span>ames <span>N</span>ich</h1>
                 <p>Mengedukasi para gamers mengenai adanya console-console yang keren selain Playstation saja.</p> 
-                <p>atau orang biasa menyebutnya plestesen</p>
+                <p>atau orang biasa menyebutnya plestesen.</p>
                 <div class="right-content">
-                        <h4>Adrian Zidan</h4>
+                        <h4><span>A</span>drian <span>Z</span>idan <b>.</b></h4>
                 </div>
             
         </div>
@@ -32,6 +35,15 @@
     </header>
 
     <!-- content-start -->
+    <?php if(empty($home_cont)) :?>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="alert alert-danger" role="alert">
+                artikel not found!
+            </div>
+        </div>
+    </div>
+    <?php endif ;?>
     <main id="content">
 <?php foreach( $home_cont as $h_cont) : ?>
         <div class="card-wrapper">
