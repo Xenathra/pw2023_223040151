@@ -55,12 +55,12 @@ if ( isset ($_POST["done"]) ){
         <br><br>
         <h3>Add an content</h3>
         <br><br>
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
             <div class="content-wrapper">
                 <!-- fitur add content di home.view.php-start -->
                 <div class="cont1">
                     <label for="gambar">Gambar :</label>
-                    <input type="text" id = "gambar" name="gambar" > <!-- belum bisa input gambar -->
+                    <input type="file" id = "gambar" name="gambar" > 
                     <label for="judul">Judul :</label>
                     <input type="text" id = "judul" name="judul" >
                     <label for="teast_detail">Teast detail :</label>

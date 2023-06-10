@@ -73,12 +73,12 @@ if ( isset ($_POST["done"]) ){
             <h3>Edit an content</h3>
         </div>
         <br><br>
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
             <div class="content-wrapper">
                 <div class="cont1">
                     <input type="hidden" id="id" name="id" value="<?= $edit['id'] ;?>">
                     <label for="gambar">Gambar :</label>
-                    <input type="text" id = "gambar" name="gambar" value="<?= $edit['gambar'] ;?>" > 
+                    <input type="file" id = "gambar" name="gambar" value="<?= $edit['gambar'] ;?>" > 
                     <label for="judul">Judul :</label>
                     <input type="text" id = "judul" name="judul" value="<?= $edit['judul'] ;?>" >
                     <label for="teast_detail">Teast detail :</label>

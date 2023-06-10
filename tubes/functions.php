@@ -23,7 +23,12 @@ function tambah ($data) {
     $sub_judul = htmlspecialchars($data["sub_judul"]);
     $isi = htmlspecialchars($data["isi"]);
 
-    $gambar = htmlspecialchars($data["gambar"]);
+    // upload gambar
+    $gambar = upload();
+    if ( !$gambar ){
+        return false;
+    }
+    
     $judul = htmlspecialchars($data["judul"]);
     $teast_detail = htmlspecialchars($data["teast_detail"]);
 
@@ -44,6 +49,48 @@ function tambah ($data) {
 
     return mysqli_affected_rows($conn);
 }
+
+// function upload
+    function upload(){
+        $namaFile = $_FILES['gambar']['name'];
+        $ukuranFile = $_FILES['gambar']['size'];
+        $error = $_FILES['gambar']['error'];
+        $tmpName = $_FILES['gambar']['tmp_name'];
+
+        //cek apakah tidak ada gambar yang di upload
+        if( $error === 4 ) {
+            echo "<script>
+                    alert('Pilih gambar terlebih dahulu')
+                    </script";
+            return false;
+        }
+
+        // cek apakah yang diupload hanya gambar
+        $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
+        $ekstensiGambar = explode('.', $namaFile);
+        $ekstensiGambar = strtolower( end($ekstensiGambar) );
+        if( !in_array($ekstensiGambar, $ekstensiGambarValid) ){
+            echo "<script>
+                    alert('Yang anda upload bukan GAMBAR!!')
+                    </script";
+            return false;
+        }
+
+        // cek jika ukuran file terlalu besar 
+        if( $ukuranFile > 1000000){
+            echo "<script>
+                    alert('Ukuran gambar anda terlalu besar!')
+                    </script";
+            return false;
+        }
+
+        // lolos pengecekan, gambar siap di upload
+        move_uploaded_file($tmpName, 'img/'. $namaFile);
+
+        return $namaFile;
+
+
+    }
 
 // add artikel yg udah ada
     function add($data){
@@ -69,8 +116,6 @@ function tambah ($data) {
         global $conn;   
         mysqli_query($conn, "DELETE FROM home_content WHERE id = $id") or die(mysqli_error($conn));
 
-        mysqli_query($conn, "DELETE FROM console_content WHERE id = $id") or die(mysqli_error($conn));
-
         return mysqli_affected_rows($conn);
     }
 
@@ -79,7 +124,11 @@ function tambah ($data) {
         global $conn;
 
         $id = $data["id"];
-        $gambar = htmlspecialchars($data["gambar"]);
+
+        $gambar = upload();
+        if ( !$gambar ){
+            return false;
+        }
         $judul = htmlspecialchars($data["judul"]);
         $teast_detail = htmlspecialchars($data["teast_detail"]);
 
