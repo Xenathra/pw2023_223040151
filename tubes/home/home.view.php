@@ -48,14 +48,15 @@
     <?php if(empty($home_cont)) :?>
     <div class="row">
         <div class="col-md-6 position-absolute top-55 start-50 translate-middle">
-            <div class="alert alert-danger" role="alert">
+            <div class="alert alert-danger text-center" role="alert">
                 artikel not found!
             </div>
         </div>
     </div>
     <?php endif ;?>
 <?php foreach( $home_cont as $h_cont) : ?>
-        <div class="card-wrapper">
+    
+        <div class="card-wrapper" >
             <div class="card" style="width: 18rem;">
                 <img id="gambar" src="../img/<?= $h_cont['gambar']; ?>" class="card-img-top" alt="switch-console" width="412">
                 <div class="card-body">
@@ -68,16 +69,18 @@
                     <!-- fitur edit-end -->
                 </div>
             </div>
+        
+       
 <?php endforeach; ?>
-            
-        </div>
+</div>     
+        
     </main>
     <!-- content-end -->
     
     <!-- footer-start -->
     <?php require('partials/home-footer.php'); ?>
     <!-- footer-end -->
-
+    <script src="../js/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>

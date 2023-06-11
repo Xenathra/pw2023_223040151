@@ -12,6 +12,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#content">Content</a>
                     </li>
+                    <!-- fitur search-start -->
                     <li class="nav-item">
                     <div class="row">
                         <div class="col-md">
@@ -27,6 +28,7 @@
                         </div>
                     </div>
                     </li>
+                    <!-- fitur search-end -->
                     <li class="nav-item">
                         <!-- logout -->
                         <a class="nav-link ms-3" href="../logout.php"><i class="fa-solid fa-arrow-up-from-bracket fa-lg"></i></a>
