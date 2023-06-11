@@ -1,12 +1,25 @@
 <?php 
-    if( isset($_POST['submit']) ){
-        if( $_POST['uname'] == "admin" && $_POST['psw'] == "admin" ){
-            header("Location: ../admin/admin.php");
-            exit;
-        }else{
-            $errormsg = true;
-            
+    require '../functions.php';
+
+    if( isset($_POST['login']) ){
+
+        $uname = $_POST['uname'];
+        $psw = $_POST['psw'];
+
+        $result = mysqli_query($conn, "SELECT * FROM user WHERE uname = '$uname'");
+        
+        // cek username
+        if( mysqli_num_rows($result) === 1) {
+
+            //cek passwrord
+            $row = mysqli_fetch_assoc($result);
+            if(password_verify($psw, $row['psw']) ) {
+                header("Location: ../home/home.view.php");
+                exit;
+            }
         }
+
+        $error = true;
     }
 ?>
 
@@ -24,7 +37,7 @@
     <h2>WELCOME!</h2>
         <!-- Error Messages-start -->
         <div class="errormsg">
-            <?php if( isset($errormsg) ) :?>
+            <?php if( isset($error) ) :?>
                 <p>The username or password is incorrect.</p>
             <?php endif ?>
         </div> 
@@ -43,7 +56,7 @@
                     <!-- psw-end -->
                 
                     <!-- LoginButton-start -->
-                    <button type="submit" name="submit">Login</button>
+                    <button type="submit" name="login">Login</button>
                     <!-- LoginButton-end -->
 
                     <p>

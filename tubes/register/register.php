@@ -30,7 +30,7 @@ if( isset($_POST["register"]) ){
         <form class="container" action="" method="post">
             
             <label for="uname"><span class="text"><b>Username</b></label></span>
-            <input type="text" id="uname" name="uname" required autocomplete="off">
+            <input type="text" id="uname" name="uname" required autocomplete="off" autofocus>
             <!-- username-end -->
                     
             <!-- psw-start -->
