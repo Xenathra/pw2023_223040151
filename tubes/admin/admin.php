@@ -1,11 +1,7 @@
 <?php 
 session_start();
 
-//cek user apakah sudah berhasil login apa belum
-if( !isset($_SESSION["login"]) ) {
-    header("location: ../login/login.php");
-    exit;
-}
+
 // konkesi ke DBMS   
 require '../functions.php';
 
@@ -99,22 +95,12 @@ if ( isset ($_POST["done"]) ){
                 <i class="fa-solid fa-arrow-right fa-2xl"></i>
             </a>
             </div>
-                <!-- fungsi admin yang belum ditambahin, dan belum berfungsi -->
-                    <!-- add artikel -done -->
-                    <!-- add foto di article -->
-                    <!-- add foto di home -done-->
-                    <!-- add detail teast content di home -done-->
-                    <!-- add fitur edt -->
-                    <!-- add fitur hapus-done -->
-                <!-- kasih button untuk toggle ke hidden form, form untuk nambah yang sudah ada  -->
-            
-
             
         <!-- content-end -->
-        <br><br>
-        <div class="logout-btn">
-            <p><a href="../home/home.view.php">Logout?</a></p>
-        </div>    
+        
+                        <!-- logout -->
+                        <a class="nav-link ms-3" href="../logout.php"><i class="fa-solid fa-arrow-up-from-bracket fa-lg"></i></a>
+                    
         
     </main>        
 </body>

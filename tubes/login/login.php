@@ -3,7 +3,7 @@
     session_start();
 
     if( isset($_SESSION["login"]) ){
-        header("Location: ../home/home.view.php");
+        header("Location: ../admin/admin.php");
         exit;
     }
 
