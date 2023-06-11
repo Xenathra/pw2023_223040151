@@ -162,4 +162,38 @@ function upload(){
         return $rows;
     }
 
+    //function registrasi
+    function registrasi($data) {
+        global $conn;
+
+        $uname = strtolower( stripslashes($data['uname']));
+        $psw = mysqli_real_escape_string($conn, $data['psw']);
+        $confirm_psw = mysqli_real_escape_string($conn, $data['confirm-psw']);
+
+        // cek username udah ada atau belum
+        $result = mysqli_query($conn, "SELECT uname FROM user WHERE uname = '$uname'");
+        if( mysqli_fetch_assoc($result) ) {
+            echo"<script>
+                    alert('Usename already exsist!')
+                </script>";
+            return false;
+        }
+
+        // cek konfirmas password
+        if( $psw !== $confirm_psw ) {
+            echo"<script>
+                    alert('Password not same!')
+                </script>";
+                return false;
+        }
+
+        //enkripsi password
+        $psw = password_hash($psw, PASSWORD_DEFAULT);
+
+        // tambahkan userbaru ke database
+        mysqli_query($conn, "INSERT INTO user VALUES (null, '$uname', '$psw')");
+
+        return mysqli_affected_rows($conn);
+    }
+
 ?>

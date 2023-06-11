@@ -1,3 +1,18 @@
+<?php 
+require '../functions.php';
+
+if( isset($_POST["register"]) ){
+
+    if( registrasi($_POST) > 0){
+        echo "<script>
+                alert('register succses!');
+                </script>";
+    } else {
+        echo mysqli_error($conn);
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +28,7 @@
     <h2>WELCOME!</h2>
 
         <form class="container" action="" method="post">
-            <label for="name"><span class="text"><b>Name</b></label></span>
-            <input type="text" id="name" name="name" required autocomplete="off">
-
+            
             <label for="uname"><span class="text"><b>Username</b></label></span>
             <input type="text" id="uname" name="uname" required autocomplete="off">
             <!-- username-end -->
@@ -29,7 +42,7 @@
             <!-- psw-end -->
                 
             <!-- LoginButton-start -->
-            <button type="submit" name="submit">Register</button>
+            <button type="submit" name="register">Register</button>
             <!-- LoginButton-end -->
         </form>
     
