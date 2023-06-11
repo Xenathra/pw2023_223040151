@@ -6,6 +6,7 @@ if( isset($_POST["register"]) ){
     if( registrasi($_POST) > 0){
         echo "<script>
                 alert('register succses!');
+                document.location.href = '../login/login.php';
                 </script>";
     } else {
         echo mysqli_error($conn);

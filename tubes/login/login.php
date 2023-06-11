@@ -1,4 +1,12 @@
 <?php 
+    //jalankan session
+    session_start();
+
+    if( isset($_SESSION["login"]) ){
+        header("Location: ../home/home.view.php");
+        exit;
+    }
+
     require '../functions.php';
 
     if( isset($_POST['login']) ){
@@ -14,6 +22,9 @@
             //cek passwrord
             $row = mysqli_fetch_assoc($result);
             if(password_verify($psw, $row['psw']) ) {
+                // set session
+                $_SESSION["login"] = true;
+
                 header("Location: ../home/home.view.php");
                 exit;
             }

@@ -1,4 +1,12 @@
 <?php 
+session_start();
+
+//cek user apakah sudah berhasil login apa belum
+if( !isset($_SESSION["login"]) ) {
+    header("location: ../login/login.php");
+    exit;
+}
+
 // konkesi ke DBMS   
 require 'functions.php';
 

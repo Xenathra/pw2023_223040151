@@ -9,6 +9,10 @@
             <li class="nav-item">
             <a class="nav-link" aria-current="page" href="../home/home.view.php">Home</a>
             </li>
+            <li class="nav-item">
+            <!-- logout -->
+            <a class="nav-link ms-3" href="../logout.php"><i class="fa-solid fa-arrow-up-from-bracket fa-lg"></i></a>
+            </li>
         </ul>
         </div>
         <div class="navbar-kanan">
